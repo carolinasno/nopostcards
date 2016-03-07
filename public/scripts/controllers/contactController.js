@@ -12,13 +12,23 @@ app.controller('contactsController', ['$scope', 'contactsApi', function($scope, 
     city: null,
     state: null,
     zipcode: null,
-    countries: null
+    countries: []
   };
 
   $scope.allContacts = function(){
     contactsApi.allContacts().then(function(response){
       $scope.contacts = response.data.contacts;
     });
+  }
+
+  $scope.countryCheck = function(country){
+    var index = $scope.newContact.countries.indexOf(country);
+    if (index > -1){
+      $scope.newContact.countries.splice(index, 1);
+    } else {
+      $scope.newContact.countries.push(country);
+    }
+    console.log('countries ' + $scope.newContact.countries);
   }
 
   $scope.post = function(){

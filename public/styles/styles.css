@@ -1,7 +1,6 @@
 body {
   background-color: oldlace;
-  font-family: 'Vast Shadow';
-  text-transform: uppercase;
+  font-family: 'neoretrodrawregular';
   text-align: center;
   color: #080808;
   padding: 50px;
@@ -13,7 +12,8 @@ h1 {
 }
 
 h5 {
-  font-size: 22px;
+  font-family: 'print_clearlyregular';
+  font-size: 24px;
   color: chocolate;
 }
 
@@ -22,7 +22,7 @@ header {
 }
 
 section {
-  margin: 40px;
+  margin: 20px;
 }
 
 form {
@@ -30,13 +30,19 @@ form {
 }
 
 input {
+  font-family: 'print_clearlyregular';
   text-align: center;
-  color: #080808;
+  color: chocolate;
 }
 
 label {
-  font-size: 18px;
+  font-size: 24px;
   color: #080808;
+}
+
+.country-label {
+  font-family: 'print_clearlyregular';
+  color: chocolate;
 }
 
 .btn {

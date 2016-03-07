@@ -3,11 +3,13 @@ html(lang="en" ng-app="noPostcards")
   head
     meta(charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0")
     title no postcards
-    link(href="https://fonts.googleapis.com/css?family=Vast+Shadow" rel="stylesheet" type="text/css")
+    link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Vast+Shadow" type="text/css")
+    link(rel="stylesheet" href="/styles/fonts/webfontkit-20160307-145908/stylesheet.css")
     link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css")
     link(rel="stylesheet" href="/styles/styles.css")
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js" charset="utf-8")
     script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js')
+    script(src="../scripts/scripts.js" charset="utf-8")
     script(src="../scripts/app.js" charset="utf-8")
     script(src="../scripts/controllers/contactController.js" charset="utf-8")
     script(src="../scripts/services/contactsApi.js" charset="utf-8")
@@ -15,13 +17,11 @@ html(lang="en" ng-app="noPostcards")
     div(class="container" ng-controller="contactsController")
 
       header
-        h1 no postcards
+        h1 NO POSTCARDS
 
       section
-        h5 sign up for a postcard!
-        h5 or two!
-        h5 or three!
-        h5 or four!
+        h5 i'll be in europe from march 9th to the 31st.
+        h5 sign up for a postcard! or two! or three! or four!
         h5 okay, that's enough...
 
       form(class="contact-info col s12" ng-submit="post()")
@@ -55,23 +55,23 @@ html(lang="en" ng-app="noPostcards")
             label(for="countries") Select Countries
         div(class="row countries")
           div(class="col s2")
-            input(id="london" type="checkbox" name="countries" value="london")
-            label(for="london") London
+            input(ng-click="countryCheck('london')" id="london" type="checkbox" name="countries" value="london")
+            label(class="country-label" for="london") London
           div(class="col s2")
-            input(id="paris" type="checkbox" name="countries" value="paris")
-            label(for="paris") Paris
+            input(ng-click="countryCheck('paris')" id="paris" type="checkbox" name="countries" value="paris")
+            label(class="country-label" for="paris") Paris
           div(class="col s2")
-            input(id="venice" type="checkbox" name="countries" value="venice")
-            label(for="venice") Venice
+            input(ng-click="countryCheck('venice')" id="venice" type="checkbox" name="countries" value="venice")
+            label(class="country-label" for="venice") Venice
           div(class="col s2")
-            input(id="rome" type="checkbox" name="countries" value="rome")
-            label(for="rome") Rome
+            input(ng-click="countryCheck('rome')" id="rome" type="checkbox" name="countries" value="rome")
+            label(class="country-label" for="rome") Rome
           div(class="col s2")
-            input(id="positano" type="checkbox" name="countries" value="positano")
-            label(for="positano") Positano
+            input(ng-click="countryCheck('positano')" id="positano" type="checkbox" name="countries" value="positano")
+            label(class="country-label" for="positano") Positano
           div(class="col s2")
-            input(id="milan" type="checkbox" name="countries" value="milan")
-            label(for="milan") Milan
+            input(ng-click="countryCheck('milan')" id="milan" type="checkbox" name="countries" value="milan")
+            label(class="country-label" for="milan") Milan
         div(class="row")
           div(class="col s12")
             button(type="submit" name="button" class="btn") Submit
