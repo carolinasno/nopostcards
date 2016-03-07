@@ -1,6 +1,6 @@
 body {
   background-color: oldlace;
-  font-family: 'Special Elite';
+  font-family: 'Vast Shadow';
   text-transform: uppercase;
   text-align: center;
   color: #080808;
@@ -8,12 +8,21 @@ body {
 }
 
 h1 {
-  font-size: 80px;
+  font-size: 70px;
   margin: 0;
+}
+
+h5 {
+  font-size: 22px;
+  color: chocolate;
 }
 
 header {
   margin: 10px;
+}
+
+section {
+  margin: 40px;
 }
 
 form {
