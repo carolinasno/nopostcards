@@ -12,7 +12,7 @@ api.factory('contactsApi', ['$http', function($http){
 
   contactsInterface.post = function(newContact){
     var payload = {contact: newContact};
-    console.log(payload);
+    // console.log(payload);
     return $http.post(baseUrl, payload);
   }
 
