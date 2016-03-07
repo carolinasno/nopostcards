@@ -1,0 +1,35 @@
+body {
+  background-color: oldlace;
+  font-family: 'Special Elite';
+  text-transform: uppercase;
+  text-align: center;
+  color: #080808;
+  padding: 50px;
+}
+
+h1 {
+  font-size: 80px;
+  margin: 0;
+}
+
+header {
+  margin: 10px;
+}
+
+form {
+  color: #080808;
+}
+
+input {
+  text-align: center;
+  color: #080808;
+}
+
+label {
+  font-size: 18px;
+  color: #080808;
+}
+
+.btn {
+  background-color: #080808;
+}
