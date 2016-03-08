@@ -80,15 +80,15 @@ html(lang="en" ng-app="noPostcards")
           div(class="col s12")
             button(type="submit" name="button" class="btn") Submit
 
-        h4 send postcards to these jerks:
-        ul(ng-controller="contactsController") 
-          table
-            tr
-              th name
-              th address
-              th countries
-              th notes
-            tr(ng-repeat="contact in contacts")
-              td {{ contact.lastname }}, {{ contact.firstname }}
-              td {{ contact.addressone }}, {{contact.addresstwo }}, {{contact.city}}, {{contact.state}}
-              th {{ contact.countries }}
+        //- h4 send postcards to these jerks:
+        //- ul(ng-controller="contactsController") 
+        //-   table
+        //-     tr
+        //-       th name
+        //-       th address
+        //-       th countries
+        //-       th notes
+        //-     tr(ng-repeat="contact in contacts")
+        //-       td {{ contact.lastname }}, {{ contact.firstname }}
+        //-       td {{ contact.addressone }}, {{contact.addresstwo }}, {{contact.city}}, {{contact.state}}
+        //-       th {{ contact.countries }}
