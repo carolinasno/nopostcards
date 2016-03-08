@@ -38,4 +38,6 @@ app.controller('contactsController', ['$scope', 'contactsApi', function($scope, 
     });
   }
 
+  $scope.allContacts();
+
 }]);

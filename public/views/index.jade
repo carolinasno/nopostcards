@@ -24,7 +24,7 @@ html(lang="en" ng-app="noPostcards")
         h5 sign up for a postcard! or two! or three! or four!
         h5 okay, that's enough...
 
-      form(class="contact-info col s12" ng-submit="post()")
+      form(name="contactForm" class="contact-info col s12" ng-submit="post()")
         div(class="row")
           div(class="col s6")
             label(for="first-name") First Name
@@ -74,4 +74,21 @@ html(lang="en" ng-app="noPostcards")
             label(class="country-label" for="milan") Milan
         div(class="row")
           div(class="col s12")
+            label(id="notes" for="notes") Notes
+            input(type="textarea" name="notes" placeholder="Leave a note" class="notes")
+        div(class="row")
+          div(class="col s12")
             button(type="submit" name="button" class="btn") Submit
+
+        h4 send postcards to these jerks:
+        ul(ng-controller="contactsController") 
+          table
+            tr
+              th name
+              th address
+              th countries
+              th notes
+            tr(ng-repeat="contact in contacts")
+              td {{ contact.lastname }}, {{ contact.firstname }}
+              td {{ contact.addressone }}, {{contact.addresstwo }}, {{contact.city}}, {{contact.state}}
+              th {{ contact.countries }}

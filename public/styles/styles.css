@@ -11,6 +11,10 @@ h1 {
   margin: 0;
 }
 
+h4 {
+  margin-top: 50px;
+}
+
 h5 {
   font-family: 'print_clearlyregular';
   font-size: 24px;
@@ -38,6 +42,11 @@ input {
 label {
   font-size: 24px;
   color: #080808;
+}
+
+.notes {
+  height: 100px;
+  width: 100%;
 }
 
 .country-label {
