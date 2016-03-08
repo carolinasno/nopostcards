@@ -2,7 +2,7 @@ var api = angular.module('contactsApiFactory', []);
 
 api.factory('contactsApi', ['$http', function($http){
 
-  var baseUrl = 'http://api/contacts';
+  var baseUrl = 'api/contacts';
 
   var contactsInterface = {};
 
