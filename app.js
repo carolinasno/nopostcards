@@ -8,7 +8,7 @@ app.use(express.static('./public'));
 app.set('views', __dirname + '/public/views')
 app.set('view engine', 'jade');
 
-var mongoPath = process.env.MONGOLAB_URI || 'mongodb://contacts_api';
+var mongoPath = process.env.MONGOLAB_URI || 'mongodb://localhost/contacts_api';
 mongoose.connect(mongoPath);
 
 app.use(bodyParser.json());

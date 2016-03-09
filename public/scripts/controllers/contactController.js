@@ -12,7 +12,8 @@ app.controller('contactsController', ['$scope', 'contactsApi', function($scope, 
     city: null,
     state: null,
     zipcode: null,
-    countries: []
+    countries: [],
+    notes: null
   };
 
   $scope.allContacts = function(){
@@ -28,12 +29,10 @@ app.controller('contactsController', ['$scope', 'contactsApi', function($scope, 
     } else {
       $scope.newContact.countries.push(country);
     }
-    // console.log('countries ' + $scope.newContact.countries);
   }
 
   $scope.post = function(){
     contactsApi.post($scope.newContact).then(function(){
-      // console.log($scope.newContact);
       $scope.allContacts();
     });
   }
